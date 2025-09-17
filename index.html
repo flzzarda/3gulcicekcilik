@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Gül Çiçekçilik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <style>
+    .animated-bg {
+    background: linear-gradient(270deg, #6d28d9, #9333ea, #db2777, #f59e0b);
+    background-size: 800% 800%;
+    animation: gradientFlow 15s ease infinite;
+  }
+
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4ec);
+      min-height: 100vh;
+    }
+    .flower-card {
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.flower-card:hover {
+  transform: scale(1.05);
+}
+
+.flower-card img {
+  width: 100%;
+  height: 250px; /* tüm resimler aynı boyut olsun diye */
+  object-fit: cover; /* resim kutuya tam otursun */
+  display: block;
+}
+
+.flower-name {
+  font-weight: bold;
+  color: #d81b60;
+  padding: 10px 0;
+  background: #fdf2f8;
+}
+
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="text-center py-12 text-white shadow-lg animated-bg">
+  <h1 class="text-4xl font-bold mb-2">3 Gül Çiçekçilik</h1>
+  <p class="text-lg italic">“15 Yıldır Çiçek Gibi Hizmetinizdeyiz”</p>
+    <div class="flex justify-center mt-6">
+<img src="img/ali.png" 
+     alt="Orhan Seyhan" 
+     class="w-40 h-40 object-cover rounded-full shadow-2xl border-4 border-green-600 
+            transition-transform duration-500 hover:scale-110 hover:rotate-3 animate-pulse 
+            bg-gradient-to-tr from-green-100 via-green-200 to-green-300 p-1">
+
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 bg-pink-700 text-white py-3 shadow-md z-50">
+    <div class="flex justify-center space-x-8">
+      <a href="#hakkimizda" class="hover:text-yellow-200 transition">Hakkımızda</a>
+      <a href="#cicekler" class="hover:text-yellow-200 transition">Çiçek Çeşitleri</a>
+      <a href="#iletisim" class="hover:text-yellow-200 transition">İletişim</a>
+    </div>
+  </nav>
+
+  <!-- HAKKIMIZDA -->
+  <section id="hakkimizda" class="max-w-5xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold text-pink-700 mb-6">Hakkımızda</h2>
+    <p class="text-lg text-gray-700 leading-relaxed">3 Gül Çiçekçilik olarak 15 yıldır Adana’nın kalbinde, sevdiklerinizi mutlu etmek için en taze ve en güzel çiçekleri sizlerle buluşturuyoruz. Orhan Seyhan önderliğinde kurulan işletmemiz, müşteri memnuniyetini her zaman ön planda tutmaktadır.</p>
+  </section>
+
+  <!-- ÇİÇEKLER -->
+ <section id="cicekler" class="bg-white py-16 px-6">
+  <h2 class="text-3xl font-bold text-center text-pink-700 mb-10">Çiçek Çeşitleri</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    
+    <div class="flower-card">
+      <img src="img/gul.jpg" alt="Gül Buketi">
+      <p class="flower-name">Gül</p>
+    </div>
+
+    <div class="flower-card">
+      <img src="img/orkide.jpg" alt="Orkide">
+      <p class="flower-name">Orkide</p>
+    </div>
+
+    <div class="flower-card">
+      <img src="img/lale.jpg" alt="Lale">
+      <p class="flower-name">Lale</p>
+    </div>
+
+    <div class="flower-card">
+      <img src="img/papatya.jpg" alt="Papatya">
+      <p class="flower-name">Papatya</p>
+    </div>
+
+    <div class="flower-card">
+      <img src="img/karanfil.jpg" alt="Karanfil">
+      <p class="flower-name">Karanfil</p>
+    </div>
+
+    <div class="flower-card">
+      <img src="img/mevsim.jpg" alt="Mevsim Çiçekleri">
+      <p class="flower-name">Mevsim Çiçekleri</p>
+    </div>
+
+  </div>
+</section>
+
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section id="iletisim" class="py-16 px-6 bg-gradient-to-r from-pink-50 to-pink-100">
+    <h2 class="text-3xl font-bold text-center text-pink-700 mb-8">İletişim</h2>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="mb-4"><strong>Adres:</strong> Sucuzade, Saydam Cd. No:58, 01030 Seyhan/Adana</p>
+      <p class="mb-4"><strong>Telefon:</strong> <a href="tel:+905326081679" class="text-pink-700 font-semibold hover:underline">+90 532 608 16 79</a></p>
+      <p class="mb-4"><strong>İsim:</strong> Orhan Seyhan</p>
+      <a href="https://wa.me/905326081679" target="_blank" class="inline-block mt-6 bg-green-500 text-white py-3 px-6 rounded-full shadow-lg hover:bg-green-600 transition">WhatsApp’tan Sipariş Ver</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-pink-700 text-white text-center py-6">
+    <p>© 2025 3 Gül Çiçekçilik - Tüm Hakları Saklıdır.</p>
+  </footer>
+</body>
+</html>
