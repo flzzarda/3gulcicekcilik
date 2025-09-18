@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Papatya - 3 Gül Çiçekçilik</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg,#f9f1f2,#fff7f8);
+  background-size: 800% 800%;
+  animation: grad 18s ease infinite;
+}
+@keyframes grad {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.flower-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* 🎨 Header renk geçişi animasyonu */
+.animated-header {
+  background: linear-gradient(270deg, #ec4899, #f59e0b, #10b981, #3b82f6, #8b5cf6);
+  background-size: 1000% 1000%;
+  animation: gradientShift 20s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Menü linkleri */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: white;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+<header class="animated-header text-white py-4 shadow-lg">
+  <nav class="max-w-6xl mx-auto flex flex-wrap justify-center gap-6 text-lg font-semibold">
+    <a href="index.html" class="nav-link">Ana Sayfa</a>
+    <a href="gul.html" class="nav-link">Gül</a>
+    <a href="orkide.html" class="nav-link">Orkide</a>
+    <a href="lale.html" class="nav-link">Lale</a>
+    <a href="papatya.html" class="nav-link">Papatya</a>
+    <a href="karanfil.html" class="nav-link">Karanfil</a>
+    <a href="mevsim.html" class="nav-link">Mevsim Çiçekleri</a>
+  </nav>
+</header>
+
+<main class="container grid md:grid-cols-2 gap-8 items-start">
+  <div><img src="img/papatya1.jpg" alt="Papatya" class="flower-img"></div>
+  <div>
+    <h1 class="text-3xl font-bold text-yellow-500 mb-4">🌼 Papatya</h1>
+    <p class="text-gray-600 italic mb-6">Tarihçe: Avrupa ve Anadolu’da halk hekimliğinde kullanılan şifalı bitki.</p>
+    <h2 class="text-2xl font-semibold mb-2">Faydaları</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li>Papatya çayı rahatlatıcı ve uyku düzenleyici etki sağlar.</li>
+      <li>Antienflamatuvar özellik taşır.</li>
+    </ul>
+    <h2 class="text-2xl font-semibold mt-6 mb-2">Zararları</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li>Alerjik bünyelerde reaksiyon gösterebilir.</li>
+      <li>Aşırı tüketim mideyi rahatsız edebilir.</li>
+    </ul>
+    <div class="mt-8">
+      <a href="index.html" class="bg-yellow-500 text-white px-6 py-3 rounded-full shadow hover:bg-yellow-600 transition">⬅ Ana Sayfa</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
